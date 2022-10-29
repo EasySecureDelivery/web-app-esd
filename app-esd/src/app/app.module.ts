@@ -10,20 +10,27 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './vista/login/login.component';
 import { SharedModule } from './shared/shared.module';
 
-
+import { ShippingstatusComponent } from './vista/empresario/shippingstatus/shippingstatus.component';
+import { MyshipmentsComponent } from './vista/empresario/myshipments/myshipments.component';
+import { DatapersonComponent } from './vista/empresario/dataperson/dataperson.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    ShippingstatusComponent,
+    MyshipmentsComponent,
+    DatapersonComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
