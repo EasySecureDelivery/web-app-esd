@@ -1,0 +1,10 @@
+.row{
+    margin-left: 35%;
+}   
+mat-form-field.mat-form-field {
+    width: 380px;
+    height: 90px; 
+    margin-top: 10px;
+    color: whitesmoke;
+    flex-direction: column;
+  }
