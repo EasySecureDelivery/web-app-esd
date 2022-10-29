@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 //componentes
 import { LoginComponent } from './vista/login/login.component';
 import { SharedModule } from './shared/shared.module';
+
 import { ShippingstatusComponent } from './vista/empresario/shippingstatus/shippingstatus.component';
 import { MyshipmentsComponent } from './vista/empresario/myshipments/myshipments.component';
 import { DatapersonComponent } from './vista/empresario/dataperson/dataperson.component';
@@ -22,12 +23,14 @@ import { DatapersonComponent } from './vista/empresario/dataperson/dataperson.co
     ShippingstatusComponent,
     MyshipmentsComponent,
     DatapersonComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
