@@ -1,1 +1,47 @@
-<p>login works!</p>
+<div class="body">
+    
+         
+    <div class="login"  >   
+
+       <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
+
+        <form *ngIf="!loading"   [formGroup]="form" (ngSubmit)="login()">
+           <img src="../../../assets/img/Imagen de WhatsApp 2022-10-27 a las 11.48.14.jpg" width="20%" >
+             
+           <div>
+           <mat-form-field class="ancho" appearance="fill">
+               <mat-label>Username</mat-label>
+               <input matInput autocomplete="on" formControlName="Username" >
+           </mat-form-field>
+          </div>
+           <div>
+               <mat-form-field class="ancho" appearance="fill">
+                   <mat-label>Password</mat-label>
+                   <input matInput autocomplete="on"  formControlName="Password">
+               </mat-form-field>
+               <br>
+               <button type="submit" class="ancho" class="button" mat-raised-button  color="primary" [disabled]="form.invalid"  >login</button>
+           </div>
+           <div>
+                   <p>Don´t have a user?  
+                       <button  mat-flat-button>Sign up</button>               
+                   </p>         
+           </div>
+           <div> <p>  Deseo ver el estado de mi envío!  </p></div>
+           <div>         
+                   <button class ="click" mat-flat-button>click aqui</button>  
+           </div>
+
+        </form>
+               
+               
+
+       
+       
+   </div>
+
+   
+
+
+       
+</div>

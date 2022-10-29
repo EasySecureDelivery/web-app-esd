@@ -1,0 +1,43 @@
+.body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    background-color: #FFC107;
+}
+
+
+
+.login{
+   width: 100%;
+   max-width: 330%;
+   text-align: center;
+
+}
+.instagram{
+    width: 10%;
+    max-width: 330%;
+  
+    
+ }
+
+.ancho{
+   
+    width: 20%;
+ }
+
+ .button{
+    width: 15%;
+    height: 50px;  
+ }
+
+ .sign{
+    width: 10%;
+    height: 25px;  
+    text-align: auto;
+    
+ }
+
+ .spinner{
+    margin: auto;
+ }
