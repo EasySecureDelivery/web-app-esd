@@ -13,6 +13,7 @@ import { SharedModule } from './shared/shared.module';
 import { ShippingstatusComponent } from './vista/empresario/shippingstatus/shippingstatus.component';
 import { MyshipmentsComponent } from './vista/empresario/myshipments/myshipments.component';
 import { DatapersonComponent } from './vista/empresario/dataperson/dataperson.component';
+import { TicketshipmentComponent } from './vista/empresario/ticketshipment/ticketshipment.component';
 
 
 
@@ -23,7 +24,7 @@ import { DatapersonComponent } from './vista/empresario/dataperson/dataperson.co
     ShippingstatusComponent,
     MyshipmentsComponent,
     DatapersonComponent,
-
+    TicketshipmentComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ShipmentService } from '../../services/shipment.service';
-import { Action } from 'rxjs/internal/scheduler/Action';
 import { Shipment } from '../../model/shipment';
 @Component({
   selector: 'app-shippingstatus',
@@ -23,7 +22,7 @@ export class ShippingstatusComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getKnowledges();
+    this.getShipment();
   }
 
   applyFilter(event: Event) {
@@ -31,19 +30,19 @@ export class ShippingstatusComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  getKnowledges() {
+  getShipment() {
     this.ShipmentService.getShipment().subscribe((data: Shipment[]) => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
     });
   }
 
-  deleteKnowledge(id: number) {
+  deleteShipment(id: number) {
     this.ShipmentService.deleteShipment(id).subscribe(() => {
       this.dataSource.data = this.dataSource.data.filter((e: Shipment) => {
         return e.id !== id ? e : false;
       });
-      this.snackBar.open('El knowledge fue eliminado con exito!', '', {
+      this.snackBar.open('El Shipment fue eliminado con exito!', '', {
         duration: 6000
       });
     });
