@@ -1,0 +1,14 @@
+.card{
+    background-color: #0441DB;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+mat-card-subtitle{
+    color: white;
+    margin-left: 100px;
+    font-size: large;
+}
+button{
+    width: 90px;
+}

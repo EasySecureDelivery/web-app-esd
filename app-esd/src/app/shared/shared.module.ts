@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import {MatRadioModule} from '@angular/material/radio';
     MatTableModule,
     MatPaginatorModule,
     MatRadioModule,
+    MatCardModule,
 
   ],
   exports:[
@@ -56,6 +58,7 @@ import {MatRadioModule} from '@angular/material/radio';
     MatTableModule,
     MatPaginatorModule,
     MatRadioModule,
+    MatCardModule,
   ]
 })
 export class SharedModule { }
