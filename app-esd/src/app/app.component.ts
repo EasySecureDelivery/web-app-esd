@@ -5,6 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'app-esd';
+export class AppComponent implements AfterViewInit{
+  title = 'Myparte';
+  constructor(private elementRef: ElementRef) {}
+  ngAfterViewInit() {
+      this.elementRef.nativeElement.ownerDocument
+          .body.style.backgroundColor = '#FFBA09';
+  }
 }
