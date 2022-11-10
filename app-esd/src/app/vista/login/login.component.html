@@ -1,13 +1,8 @@
 <div class="body">
-    
-         
     <div class="login"  >   
-
        <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
-
         <form *ngIf="!loading"   [formGroup]="form" (ngSubmit)="login()">
            <img src="../../../assets/img/Imagen de WhatsApp 2022-10-27 a las 11.48.14.jpg" width="20%" >
-             
            <div>
            <mat-form-field class="ancho" appearance="fill">
                <mat-label>Username</mat-label>
@@ -29,19 +24,8 @@
            </div>
            <div> <p>  Deseo ver el estado de mi envío!  </p></div>
            <div>         
-                   <button class ="click" mat-flat-button>click aqui</button>  
+                   <button class ="click" mat-flat-button><a class="pointer" routerLink="../empresario-header">click aqui</a></button>  
            </div>
-
         </form>
-               
-               
-
-       
-       
    </div>
-
-   
-
-
-       
 </div>
