@@ -16,11 +16,14 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCardModule} from '@angular/material/card';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 
 @NgModule({
@@ -28,6 +31,7 @@ import {MatCardModule} from '@angular/material/card';
   imports: [
     CommonModule,
     MatSliderModule,
+    MatListModule,
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,
@@ -41,10 +45,11 @@ import {MatCardModule} from '@angular/material/card';
     MatPaginatorModule,
     MatRadioModule,
     MatCardModule,
+    MatSidenavModule
 
   ],
   exports:[
-
+    MatListModule,
     MatSliderModule,
     MatInputModule,
     MatButtonModule,
@@ -59,6 +64,7 @@ import {MatCardModule} from '@angular/material/card';
     MatPaginatorModule,
     MatRadioModule,
     MatCardModule,
+    MatSidenavModule
   ]
 })
 export class SharedModule { }
