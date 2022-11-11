@@ -1,14 +1,7 @@
-<div class="body">
-    
-         
-    <div class="login"  >   
-
-      
-
-        <form *ngIf="!loading"   [formGroup]="form" (ngSubmit)="login()">
-          
-             
-           
+    <img src="../../../assets/img/Imagen de WhatsApp 2022-10-27 a las 11.48.14.jpg" width="11%" class="img">   
+<section class="p">
+    <section class="login">   
+        <form  [formGroup]="form" (ngSubmit)="login()">
           <div>
            <mat-form-field class="ancho" appearance="fill">
                <mat-label>Tracking code</mat-label>
@@ -23,18 +16,7 @@
                <br>
                <button type="submit" class="ancho" class="button" mat-raised-button  color="primary" [disabled]="form.invalid"  >ok</button>
            </div>
-           
-
         </form>
-               
-               
-
-       
-       
-   </div>
-
+    </section>
+</section>
    
-
-
-       
-</div>

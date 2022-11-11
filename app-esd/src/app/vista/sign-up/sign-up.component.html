@@ -1,0 +1,46 @@
+<h2>SIGN UP</h2>
+<button mat-button class="back" (click)="back()"><- Back</button>
+<br>
+<div class="form">
+    <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Number</mat-label>
+        <input matInput placeholder="Number">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Select your location</mat-label>
+        <mat-select>
+            <mat-option value="lima">lima</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Select your sector</mat-label>
+        <mat-select>
+            
+            <mat-option value="sm">San Miguel</mat-option>
+            <mat-option value="lima">lima</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+<button mat-button class="next" (click)="next()">Register User</button>

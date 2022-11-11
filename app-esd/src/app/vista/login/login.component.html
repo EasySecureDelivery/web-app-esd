@@ -2,7 +2,7 @@
     <div class="login"  >   
        <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
         <form *ngIf="!loading"   [formGroup]="form" (ngSubmit)="login()">
-           <img src="../../../assets/img/Imagen de WhatsApp 2022-10-27 a las 11.48.14.jpg" width="20%" >
+           <img src="../../../assets/img/Imagen de WhatsApp 2022-10-27 a las 11.48.14.jpg" width="20%" style="margin-bottom: 20px;">
            <div>
            <mat-form-field class="ancho" appearance="fill">
                <mat-label>Username</mat-label>
@@ -15,16 +15,16 @@
                    <input matInput autocomplete="on"  formControlName="Password">
                </mat-form-field>
                <br>
-               <button type="submit" class="ancho" class="button" mat-raised-button  color="primary" [disabled]="form.invalid">login</button>
+               <button type="submit" class="ancho" class="button" mat-raised-button [disabled]="form.invalid">login</button>
            </div>
            <div>
             <p>Don't have a user?  
-                <button  mat-flat-button><a routerLink= "">Sign up</a></button>               
+                <button  mat-flat-button (click)="registrarse()">Sign up</button>               
             </p>         
     </div>
     <div> <p>  Deseo ver el estado de mi envío!  </p></div>
     <div>         
-            <button class ="click" mat-flat-button><a routerLink= "">click aqui</a></button>
+            <button class ="click" mat-flat-button (click)="track()">click aqui</button>
     </div>
         </form>
    </div>

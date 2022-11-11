@@ -15,11 +15,15 @@ import { MyshipmentstransportComponent } from './vista/transport/myshipmentstran
 import { ProfileComponent } from './vista/transport/profile/profile.component';
 import { RegistershipmentsComponent } from './vista/transport/registershipments/registershipments.component';
 import { TransportHeaderComponent } from './vista/transport/transport-header/transport-header.component';
+import { TrackingStatusComponent } from './vista/tracking-status/tracking-status.component';
+import { SignUpComponent } from './vista/sign-up/sign-up.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'login', pathMatch: 'full'},
   {path:'login',component:LoginComponent},
   {path:'tracking',component:TrackingComponent},
+  {path:'tracking-status',component:TrackingStatusComponent},
+  {path:'sign-up',component:SignUpComponent},
   {path:'transport-header',component:TransportHeaderComponent,
     children:[
   {path:'myaccount',component:MyaccountComponent},

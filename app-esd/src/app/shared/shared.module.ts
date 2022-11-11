@@ -24,7 +24,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -47,8 +47,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatRadioModule,
     MatCardModule,
     MatSidenavModule,
-    MatSlideToggleModule
-
+    MatSlideToggleModule,
+    MatSelectModule
   ],
   exports:[
     MatListModule,
@@ -67,7 +67,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatRadioModule,
     MatCardModule,
     MatSidenavModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSelectModule
   ]
 })
 export class SharedModule { }

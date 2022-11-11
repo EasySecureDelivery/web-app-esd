@@ -56,4 +56,10 @@ export class LoginComponent implements OnInit {
   transview(){
     this.router.navigate(['transport-header']);
   }
+  registrarse():void{
+    this.router.navigate(['sign-up']);
+  }
+  track():void{
+    this.router.navigate(['tracking']);
+  }
 }
