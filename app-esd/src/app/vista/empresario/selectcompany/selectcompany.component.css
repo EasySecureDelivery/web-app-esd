@@ -1,0 +1,38 @@
+.example-card{
+    padding: 20px;
+width: 180px;
+border-radius: 20px;
+align-items: center;
+text-align: center;
+margin: 10px;
+}
+
+.mat-card-image{
+    width:90%;
+    align-items: center;
+    text-align: center;
+}
+.mat-button{
+    border-radius: 10px;
+    color: white;
+    background-color: blue;
+    width: 90%;
+}
+.container-cards{
+    display: flex;
+}
+.button-unit{
+    width: 10%;
+}
+.search{
+    border-radius: 8px;
+    background-color: rgb(59, 131, 255);
+    width: 70%;
+    height: 30px;
+    border-style: none;
+}
+.h1{
+    text-align: center;
+    align-items: center;
+    
+}

@@ -18,6 +18,7 @@ import { TicketshipmentComponent } from './vista/empresario/ticketshipment/ticke
 import { TransportHeaderComponent } from './vista/transport/transport-header/transport-header.component';
 import { EmpresarioHeaderComponent } from './vista/empresario/empresario-header/empresario-header.component';
 import { MyshipmentstransportComponent } from './vista/transport/myshipmentstransport/myshipmentstransport.component';
+import { SelectcompanyComponent } from './vista/empresario/selectcompany/selectcompany.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { MyshipmentstransportComponent } from './vista/transport/myshipmentstran
     TicketshipmentComponent,
     TransportHeaderComponent,
     EmpresarioHeaderComponent,
-    MyshipmentstransportComponent
+    MyshipmentstransportComponent,
+    SelectcompanyComponent
   ],
   imports: [
     BrowserModule,
