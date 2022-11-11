@@ -1,1 +1,40 @@
-<p>tracking works!</p>
+<div class="body">
+    
+         
+    <div class="login"  >   
+
+      
+
+        <form *ngIf="!loading"   [formGroup]="form" (ngSubmit)="login()">
+          
+             
+           
+          <div>
+           <mat-form-field class="ancho" appearance="fill">
+               <mat-label>Tracking code</mat-label>
+               <input matInput autocomplete="on" formControlName="Tracking_code" >
+           </mat-form-field>
+          </div>
+           <div>
+               <mat-form-field class="ancho" appearance="fill">
+                   <mat-label>Name</mat-label>
+                   <input matInput autocomplete="on"  formControlName="Name">
+               </mat-form-field>
+               <br>
+               <button type="submit" class="ancho" class="button" mat-raised-button  color="primary" [disabled]="form.invalid"  >ok</button>
+           </div>
+           
+
+        </form>
+               
+               
+
+       
+       
+   </div>
+
+   
+
+
+       
+</div>
