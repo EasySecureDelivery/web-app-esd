@@ -26,8 +26,6 @@ const routes: Routes = [
   {path:'myshipmentstransport',component:MyshipmentstransportComponent},
   {path:'profile',component:ProfileComponent},
   {path:'registershipments',component:RegistershipmentsComponent},
-  {path:'addresse',component:AddresseComponent},
-  {path:'dataperson',component:DatapersonComponent},
   ]},
   {path:'empresario-header',component:EmpresarioHeaderComponent,
     children:[
@@ -36,7 +34,9 @@ const routes: Routes = [
     {path:'myshipments',component:MyshipmentsComponent},
     {path:'selectcompany',component:SelectcompanyComponent},
     {path:'shippingstatus',component:ShippingstatusComponent},
-    {path:'ticketshipment',component:TicketshipmentComponent}
+    {path:'ticketshipment',component:TicketshipmentComponent},
+    {path:'addresse',component:AddresseComponent},
+    {path:'dataperson',component:DatapersonComponent},
   ]
 },
 

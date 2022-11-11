@@ -1,5 +1,5 @@
-<button mat-button class="button-unit"><-Back</button>
-<h1>SELECT YOUR SHIPMENTS</h1>
+<h1 style="color:white; margin-top:1%;margin-left: 2%;">SELECT YOUR SHIPMENTS</h1>
+<button mat-button class="button-unit1" (click)="back()"><-Back</button><br>
 <input type="text" class="search" placeholder="Search">
 <div class="container-cards">
     <mat-card class="example-card">
@@ -18,8 +18,8 @@
         <img src="../../../assets/img/shipment.png" width="50%" >
             <mat-card-title>Shipment</mat-card-title>
             <mat-card-subtitle>Estimates time of arrival 2 day 3 hours</mat-card-subtitle>
-          <button mat-button>Select</button>
+          <button mat-button >Select</button>
       </mat-card>
 </div>
 
-<button mat-button class="button-unit">Next</button>
+<button mat-button class="button-unit2" (click)="next()">Next</button>

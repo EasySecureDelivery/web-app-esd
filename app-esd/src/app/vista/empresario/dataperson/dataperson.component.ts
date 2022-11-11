@@ -30,27 +30,6 @@ export class DatapersonComponent implements OnInit {
     });
   }
   saveShipment(): void {
-    const Shipment: Shipment = {
-      id: 0,
-      name:this.myForm.get('name')!.value,
-      dni:this.myForm.get('dni')!.value,
-      content: this.myForm.get('content')!.value,
-      weight:this.myForm.get('weight')!.value,
-      recipe:this.myForm.get('recipe')!.value,
-      date: this.myForm.get('date')!.value,
-      status: this.myForm.get('status')!.value,
-      contact: this.myForm.get('contact')!.value,
-    };
-    this.ShipmentService.addShipment(Shipment).subscribe({
-      next: (data) => {
-        this.snackBar.open('El Shipment fue registrado con exito!', '', {
-          duration: 6000,
-        });
-        this.router.navigate(['shipments']);
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
+        this.router.navigate(['empresario-header/selectcompany']);
+      }
   }
-}

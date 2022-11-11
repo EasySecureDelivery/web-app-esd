@@ -12,3 +12,7 @@ mat-sidenav{
     background-color:#FFD569;
     height: 100%;
 }
+a:hover{
+    color:#0441DB;
+    font-size: 130%; 
+}

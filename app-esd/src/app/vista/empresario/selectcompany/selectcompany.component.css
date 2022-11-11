@@ -20,9 +20,16 @@ margin: 10px;
 }
 .container-cards{
     display: flex;
+    margin-left: 20%;
+    margin-bottom: 50px;
 }
-.button-unit{
+.button-unit1{
     width: 10%;
+    margin-left: 4%;
+}
+.button-unit2{
+    width: 10%;
+    margin-left: 40%;
 }
 .search{
     border-radius: 8px;
@@ -30,6 +37,9 @@ margin: 10px;
     width: 70%;
     height: 30px;
     border-style: none;
+    margin-top: 2%;
+    margin-left: 14%;
+    margin-bottom: 20px;
 }
 .h1{
     text-align: center;
