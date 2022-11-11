@@ -1,1 +1,50 @@
-<p>tracking-status works!</p>
+<div class="body">
+    
+         
+    <div class="login"  >   
+
+       <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
+
+        <form *ngIf="!loading"   [formGroup]="form" (ngSubmit)="login()">
+          
+           <img src="../../../assets/img/Imagen de WhatsApp 2022-10-27 a las 11.48.14.jpg" width="10%"   >
+       
+
+          <div>
+               <mat-form-field class="ancho" appearance="outline">
+                   <br>
+               <mat-card>Tiempo de llegada: 2 días 3 horas</mat-card>
+               <br>
+               <mat-card>Address of pick up: San Isidro, 450</mat-card>
+               <br>
+               <mat-card>Code shipment: 018976587</mat-card>
+               <br>
+               <mat-card>Status: Ica</mat-card>
+               <br>
+               <mat-card>Name of destinatary: Carlos Marquez</mat-card>
+                </mat-form-field>
+                
+               
+          </div>
+
+           <div>
+               <br>
+               <button type="submit" class="ancho" class="button" mat-raised-button  color="primary" [disabled]="form.invalid"  >ok</button>
+          
+           </div>
+              
+           
+
+        </form>
+               
+               
+
+       
+       
+   </div>
+
+   
+
+
+       
+</div>
