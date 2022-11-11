@@ -9,12 +9,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 //componentes
 import { LoginComponent } from './vista/login/login.component';
 import { SharedModule } from './shared/shared.module';
-
 import { ShippingstatusComponent } from './vista/empresario/shippingstatus/shippingstatus.component';
 import { MyshipmentsComponent } from './vista/empresario/myshipments/myshipments.component';
 import { DatapersonComponent } from './vista/empresario/dataperson/dataperson.component';
 import { TicketshipmentComponent } from './vista/empresario/ticketshipment/ticketshipment.component';
-
 import { TransportHeaderComponent } from './vista/transport/transport-header/transport-header.component';
 import { EmpresarioHeaderComponent } from './vista/empresario/empresario-header/empresario-header.component';
 import { MyshipmentstransportComponent } from './vista/transport/myshipmentstransport/myshipmentstransport.component';

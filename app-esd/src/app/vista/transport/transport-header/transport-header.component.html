@@ -1,25 +1,32 @@
-<mat-toolbar style="background-color:#0441DB; color: white;">
-    <span>EasySecureDelivery</span>
-    <span class="example-spacer"></span>
-  </mat-toolbar>
-<mat-sidenav-container>
-  <mat-sidenav opened="true" mode="side">
+<mat-sidenav-container class="sidenav-container mat-app-background" [ngClass]="{'dark-theme-mode':isDarkTheme}">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar style="background-color:#0441DB; font-size: 19px; color: white;">
+      <mat-icon style="margin-left: 20px; margin-right: 10px;">account_circle</mat-icon> Transportista
+    </mat-toolbar>
     <mat-nav-list>
+      <hr style="margin-top:0;">
+      <a mat-list-item routerLink="myaccount">Profile</a>
       <hr>
-      <a mat-list-item>Profile</a>
+      <a mat-list-item routerLink="myshipmentstransport">My Shipments</a>
       <hr>
-      <a mat-list-item>My Shipments</a>
+      <a mat-list-item routerLink="registershipments">Register Shipment</a>
       <hr>
-      <a mat-list-item>Register Shipment</a>
+      <hr style="margin-top:192%;">
+      <a mat-list-item routerLink="">Sign off</a>
       <hr>
-      <hr style="margin-top:185%;">
-      <a mat-list-item>Log-out</a>
     </mat-nav-list>
   </mat-sidenav>
- <mat-sidenav-content>
-    <div class="cont" style="height: 88vh;">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.115809460365!2d-76.96560328518679!3d-12.10422359142904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c70ab77498c1%3A0xcce9f50642e7c684!2sUniversidad%20Peruana%20de%20Ciencias%20Aplicadas!5e0!3m2!1ses!2spe!4v1668144653849!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <!--<app-myshipmentstransport></app-myshipmentstransport>-->
-     </div>
+  <mat-sidenav-content style="background-color:#FFBA09;">
+    <mat-toolbar style="background-color:#0441DB; color: white;">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>EasySecureDelivery</span>
+      <span style="flex:auto;"></span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
