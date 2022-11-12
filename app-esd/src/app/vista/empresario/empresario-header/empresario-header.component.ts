@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { Component, ElementRef, OnInit } from '@angular/core';
+import { Observable, map, shareReplay } from 'rxjs';
 
 @Component({
   selector: 'app-empresario-header',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpresarioHeaderComponent implements OnInit {
 
-  constructor() { }
+  isDarkTheme: boolean = false;
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
 
-  ngOnInit(): void {
+  constructor(private breakpointObserver: BreakpointObserver,private elementRef: ElementRef) { }
+  ngAfterViewInit() {
+    this.elementRef.nativeElement.ownerDocument
+        .body.style.backgroundColor = '#FFBA09';
+}
+  ngOnInit() {
+    this.isDarkTheme = localStorage.getItem('theme') === "Dark" ? true : false;
   }
 
+  storeThemeSelection() {
+    localStorage.setItem('theme', this.isDarkTheme ? "Dark" : "Light");
+  }
 }

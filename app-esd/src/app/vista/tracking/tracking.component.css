@@ -1,0 +1,30 @@
+html{
+   margin:0;
+   padding: 0;
+}
+.login{
+   max-width: 330%;
+   text-align: center;
+   width: 100%;
+   margin-top: 4%;
+   height: 50%;
+}
+.img{
+   margin-top:10px;
+   padding: 0;
+ }
+.ancho{
+    width: 30%;
+ }
+ .button{
+    width: 15%;
+    height: 50px;
+   background-color: #0441DB;
+ }
+
+.sign{
+    width: 10%;
+    height: 25px;  
+    text-align: auto;
+    
+ }

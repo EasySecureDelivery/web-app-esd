@@ -1,0 +1,28 @@
+button{
+    width: 100px;
+    height:40px;
+    background-color: #0441DB;
+    border: 2px;
+    border-radius: 7px;
+    color: white;
+}
+.back{
+    margin-left: 3%;
+    margin-top: 5px;
+}
+.next{
+    margin-left: 40%;
+    margin-top: 10px;
+    width: 200px;
+}
+mat-form-field{
+    width: 400px;
+}
+.form{
+    margin-left: 35%;
+}
+h2{
+    font-size: 25px;
+    margin-left: 3%; 
+    color: white;  
+}

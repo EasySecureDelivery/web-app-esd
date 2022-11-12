@@ -1,0 +1,14 @@
+html{
+    margin: 0;
+}
+a.mat-list-item{
+    color:#0441DB;
+}
+.cont{
+    background-color:#FFC107 ;
+}
+mat-sidenav{
+    width: 200px;
+    background-color:#FFD569;
+    height: 100%;
+}

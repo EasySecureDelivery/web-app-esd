@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Route, Router } from '@angular/router';
+import {  Router } from '@angular/router';
 import { timeout } from 'rxjs';
 
 @Component({
@@ -31,18 +31,18 @@ export class LoginComponent implements OnInit {
 
     if(username == 'sasha' && password=='1234567'){
       //redireccionamos 
-      this.fakeLoading();
-
-    }else{
+      this.empview();
+    }
+    if(username == 'diego' && password=='1234'){
+      this.transview();
+    }
+    else{
       //error
       this.error();
       this.form.reset();
 
     }
-
-
   }
-
   error(){
     this._snackBar.open('username or password invalid', '', {
       duration:5000,
@@ -50,12 +50,16 @@ export class LoginComponent implements OnInit {
       verticalPosition:'top',
     })
   }
-
-  fakeLoading(){
-    this.loading =true;
-    setTimeout(() => {
-
-      this.router.navigate(['registro'])
-    }, 1500);
+  empview(){
+    this.router.navigate(['empresario-header']);
+  }
+  transview(){
+    this.router.navigate(['transport-header']);
+  }
+  registrarse():void{
+    this.router.navigate(['sign-up']);
+  }
+  track():void{
+    this.router.navigate(['tracking']);
   }
 }

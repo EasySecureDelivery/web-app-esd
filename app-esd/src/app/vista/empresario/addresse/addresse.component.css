@@ -1,0 +1,38 @@
+button{
+    width: 100px;
+    height:40px;
+    background-color: #0441DB;
+    border: 2px;
+    border-radius: 7px;
+    color: white;
+}
+.map{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:30%;
+}
+.back{
+    margin-left: 3%;
+    margin-top: 5px;
+}
+.next{
+    margin-left: 40%;
+    margin-top: 10px;
+    width: 200px;
+}
+.search{
+    width: 800px;
+    height: 30px;
+    margin-left: 14%;
+    border-radius: 8px;
+    background-color: rgb(59, 131, 255);
+    border-style: none;
+}
+.search:hover{
+    border: 0;
+}
+h2{
+    color: white;
+    margin-left: 3%;
+    margin-top: 0.5%;
+}

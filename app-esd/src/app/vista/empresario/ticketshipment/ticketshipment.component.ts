@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ticketshipment',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TicketshipmentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+  next():void{
+    this.router.navigate(['empresario-header/shippingstatus'])
   }
 
 }

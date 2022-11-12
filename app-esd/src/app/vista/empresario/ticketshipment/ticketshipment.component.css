@@ -2,7 +2,8 @@ mat-card{
     background-color: #0441DB;
     text-align: center;
     width: 500px;
-    margin: auto;
+    margin-top:10%;
+    margin-left: 30%;
 }
 mat-card-subtitle{
     color: white;

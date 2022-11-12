@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ipickup',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IpickupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
-
+  back():void{
+    this.router.navigate(['empresario-header/profile']);
+  }
+  next():void{
+    this.router.navigate(['empresario-header/addresse']);
+  }
 }

@@ -4,12 +4,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-tracking',
-  templateUrl: './tracking.component.html',
-  styleUrls: ['./tracking.component.css']
+  selector: 'app-tracking-status',
+  templateUrl: './tracking-status.component.html',
+  styleUrls: ['./tracking-status.component.css']
 })
-export class TrackingComponent implements OnInit {
+export class TrackingStatusComponent implements OnInit {
+
   form: FormGroup;
+  loading = false;
+  
   constructor(private fb:FormBuilder, private _snackBar: MatSnackBar, private router: Router) { 
     this.form= this.fb.group({
       Tracking_code: ['',Validators.required ],
@@ -35,7 +38,10 @@ export class TrackingComponent implements OnInit {
       this.form.reset();
 
     }
+
+
   }
+
   error(){
     this._snackBar.open('username or password invalid', '', {
       duration:5000,
@@ -45,10 +51,10 @@ export class TrackingComponent implements OnInit {
   }
 
   fakeLoading(){
+    this.loading =true;
     setTimeout(() => {
-      this.router.navigate(['tracking-status'])
+
+      this.router.navigate(['registro'])
     }, 1500);
   }
 }
-
-

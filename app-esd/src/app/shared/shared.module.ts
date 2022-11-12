@@ -23,7 +23,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
-
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -45,8 +46,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatPaginatorModule,
     MatRadioModule,
     MatCardModule,
-    MatSidenavModule
-
+    MatSidenavModule,
+    MatSlideToggleModule,
+    MatSelectModule
   ],
   exports:[
     MatListModule,
@@ -64,7 +66,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatPaginatorModule,
     MatRadioModule,
     MatCardModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSlideToggleModule,
+    MatSelectModule
   ]
 })
 export class SharedModule { }
