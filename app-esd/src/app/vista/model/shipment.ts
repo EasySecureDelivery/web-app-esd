@@ -1,11 +1,7 @@
-export interface Shipment {
+export class Shipment {
     id:number;
-    name:string;
-    dni:string;
     content:string;
-    weight:number;
-    recipe:string;
-    date:number;
+    date:string;
     status:string;
     contact:string;
 }

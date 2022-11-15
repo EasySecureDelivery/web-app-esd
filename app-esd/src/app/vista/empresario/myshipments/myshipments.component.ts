@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -11,39 +12,53 @@ import { ShipmentService } from '../../services/shipment.service';
   styleUrls: ['./myshipments.component.css']
 })
 export class MyshipmentsComponent implements OnInit {
+  Shipments:any[]=[]; 
   displayedColumns: String[] = [
     'id',
     'content',
     'date',
     'status',
     'contact',
+    'action'
   ];
-  dataSource= new MatTableDataSource<Shipment>();
-  
+  dataSource = new MatTableDataSource <any>(this.Shipments);
+
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+
   clickedRows = new Set<Shipment>();
   Shipment!: Shipment[];
-  @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
-  constructor(private ShipmentService: ShipmentService, private snackBar: MatSnackBar) { }
+  constructor(private ShipmentService: ShipmentService, private snackBar: MatSnackBar,private http:HttpClient) { }
   ngOnInit(): void {
-    this.getShipment();
+    this.ShipmentService.getall().subscribe((datos:any)=>{
+      this.Shipments=datos;
+    })
+    this.getAll();
+  }
+  getAll(){
+    this.ShipmentService.getall().subscribe(
+      res => {
+    this.dataSource = new MatTableDataSource<any>(this.Shipments);
+    this.dataSource.paginator = this.paginator;
+      },
+      err=>{
+        console.log(err);
+      });
+  
   }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
 
-  getShipment() {
-    this.ShipmentService.getShipment().subscribe((data: Shipment[]) => {
-      this.dataSource = new MatTableDataSource(data);
-      this.dataSource.paginator = this.paginator;
-    });
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
-
-  deleteShipment(id: number) {
-    this.ShipmentService.deleteShipment(id).subscribe(() => {
-      this.dataSource.data = this.dataSource.data.filter((e: Shipment) => {
-        return e.id !== id ? e : false;
-      });
-    });
+  delete(x:any){
+    const ok = confirm('estas seguro?');
+    if(ok){
+      this.ShipmentService.delete(x).subscribe(()=>{
+        this.getAll();
+      })
+    }
   }
 }

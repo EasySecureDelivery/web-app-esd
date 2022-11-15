@@ -35,7 +35,7 @@ import { SignUpComponent } from './vista/sign-up/sign-up.component';
     SelectcompanyComponent,
     TrackingComponent,
     TrackingStatusComponent,
-    SignUpComponent
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
