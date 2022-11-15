@@ -1,30 +1,22 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Shipment } from '../model/shipment';
 @Injectable({
   providedIn:'root'
 })
 export class ShipmentService {
-  basePath: string = environment.basePath;
+ 
   constructor(private http: HttpClient) { }
-  getShipment() {
-    return this.http.get<Shipment[]>(this.basePath);
-  }
 
-  getShipmentId(id: any) {
-    return this.http.get<Shipment>(`${this.basePath}/${id}`);
+  getall(){
+    return this.http.get("http://localhost:8080/shipments");
   }
-
-  addShipment(Shipment: Shipment) {
-    return this.http.post<Shipment>(this.basePath, Shipment);
+  create(x:any){
+    return this.http.post("http://localhost:8080/shipments",x);
   }
-
-  updateShipment(id: any, Shipment: Shipment) {
-    return this.http.put<Shipment>(`${this.basePath}/${id}`, Shipment);
+  update(id:number,x:any){
+    return this.http.put("http://localhost:8080/shipments/"+id,x);
   }
-
-  deleteShipment (id: any) {
-    return this.http.delete<Shipment>(`${this.basePath}/${id}`);
+  delete(id:string){
+    return this.http.delete("http://localhost:8080/shipments/"+id);
   }
 }
