@@ -38,17 +38,9 @@ export class LoginComponent implements OnInit {
     }
     else{
       //error
-      this.error();
       this.form.reset();
 
     }
-  }
-  error(){
-    this._snackBar.open('username or password invalid', '', {
-      duration:5000,
-      horizontalPosition:'center',
-      verticalPosition:'top',
-    })
   }
   empview(){
     this.router.navigate(['empresario-header']);

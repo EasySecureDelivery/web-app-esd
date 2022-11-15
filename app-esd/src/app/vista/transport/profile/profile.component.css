@@ -1,0 +1,22 @@
+h2{
+    margin-top: 4%;
+    margin-left: 5%;
+    color:white;
+    font-size: 30px;
+}
+mat-list{
+    margin-left: 30%;
+    margin-top: 3%;
+}
+.mat-list-item{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+button{
+    color: white;
+    margin-top:5%;
+    margin-left: 32%;
+    width: 220px;
+    background-color:blue ;
+}

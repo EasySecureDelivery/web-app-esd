@@ -20,6 +20,7 @@ import { SelectcompanyComponent } from './vista/empresario/selectcompany/selectc
 import { TrackingComponent } from './vista/tracking/tracking.component';
 import { TrackingStatusComponent } from './vista/tracking-status/tracking-status.component';
 import { SignUpComponent } from './vista/sign-up/sign-up.component';
+import { ProfileComponent } from './vista/transport/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { SignUpComponent } from './vista/sign-up/sign-up.component';
     TrackingComponent,
     TrackingStatusComponent,
     SignUpComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,11 @@
-<p>sa</p>
+<h2>Profile</h2>
+<mat-list>
+    <mat-list-item *mat-line="let element"></mat-list-item>
+    <mat-list-item >username:   {{element.username}}</mat-list-item>
+    <mat-list-item >name:   {{element.name}}</mat-list-item>
+    <mat-list-item >password:   {{element.password}}</mat-list-item>
+    <mat-list-item >number: {{element.number}}</mat-list-item>
+    <mat-list-item >sector: {{element.sector}}</mat-list-item>
+</mat-list>
+
+<button mat-button (click)="edit()">EDIT</button>

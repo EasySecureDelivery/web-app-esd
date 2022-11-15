@@ -48,7 +48,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatCardModule,
     MatSidenavModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   exports:[
     MatListModule,
@@ -68,7 +68,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatCardModule,
     MatSidenavModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
   ]
 })
 export class SharedModule { }
